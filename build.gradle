@@ -10,3 +10,14 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+
+task runApiJar() {
+    doLast {
+        javaexec {
+            main='-jar'
+            args= [
+                    'api-module/build/libs/api-module-1.0.jar'
+            ]
+        }
+    }
+}
