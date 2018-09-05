@@ -1,0 +1,4 @@
+rootProject.name = 'jboss-modules-prototype'
+include 'api-module'
+include 'foo-module'
+

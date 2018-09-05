@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module xmlns="urn:jboss:module:1.8" name="com.example.prototype.api" version="1.0">
+
+  <main-class name="com.example.prototype.api.Main"/>
+  <resources>
+    <artifact name = "com.example.prototype:api-module:1.0"/>
+  </resources>
+
+  <provides>
+    <service name="com.example.prototype.api.Service">
+    </service>
+  </provides>
+
+</module>

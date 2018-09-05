@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.example.prototype'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.jboss.modules:jboss-modules:1.8.5.Final'
+}
+
+// Include dependent libraries in archive.
+ext {
+    mainClassName = "com.example.prototype.api.Main"
+}
+
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

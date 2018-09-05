@@ -1,0 +1,13 @@
+### Java template
+*.class
+
+### JetBrains template
+.idea
+out/
+
+### Gradle template
+.gradle
+/build/
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar

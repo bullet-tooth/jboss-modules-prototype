@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.example.prototype'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly project(':api-module')
+}
